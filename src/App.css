@@ -21,7 +21,7 @@
 
 .container .title .txt {
   font-size: 2.3rem;
-  color: #fff;
+  /* color: #fff; */
 }
 
 .display {
@@ -30,7 +30,7 @@
   align-items: flex-end;
   justify-content: flex-start;
   gap: 10px;
-  background-color: lightgray;
+  background-color: darkgray;
   color: #fff;
 }
 
