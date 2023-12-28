@@ -27,7 +27,9 @@ class Calculator extends Component {
             this.sinConvertor()
         } else if(val === "sqrt") {
             this.sqrt()
-        }  else {
+        } else if(val === "cbrt") {
+            this.cbrt()
+        } else {
             // number, math operator
             this.setState({
                 inp: this.state.inp + val
@@ -69,17 +71,25 @@ class Calculator extends Component {
     // sinConvertor - +/-
     sinConvertor() {
         this.setState({
-            out: Math.sin(this.state.out)
+            out: this.state.out * -1
         })
     }
 
-    // e 
+    // sqrt 
     sqrt() {
         let x = Number(this.state.inp) 
         this.setState({
             out: Math.sqrt(x)
         })
-    }
+    } 
+
+    // cbrt
+    cbrt() {
+        let x = Number(this.state.inp) 
+        this.setState({
+            out: Math.cbrt(x)
+        })
+    } 
 
     render() {
         return (
